@@ -7,6 +7,7 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import Doctors from "./pages/Doctors.jsx";
 import MyProfile from "./pages/MyProfile.jsx";
+import QRScanner from "./pages/QRScanner.jsx";
 
 import LabVerification from "./pages/LabVerification.jsx";
 import BloodBank from "./pages/BloodBank.jsx";
@@ -31,6 +32,7 @@ export default function App() {
             <Route path="/doctors" element={<Doctors />} />
 
             <Route path="/my-profile" element={<MyProfile />} />
+            <Route path="/qr-scanner" element={<QRScanner />} />
 
             <Route
               path="/lab-verification"

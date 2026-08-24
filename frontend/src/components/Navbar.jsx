@@ -72,15 +72,20 @@ export default function Navbar() {
                     My Profile
                   </Link>
                 </li>
-
-                
               </>
             )}
 
             {(user?.role === "doctor" ||
               user?.role === "admin") && (
               <>
-                
+                <li className="nav-item">
+                  <Link
+                    className="nav-link"
+                    to="/qr-scanner"
+                  >
+                    QR Scanner
+                  </Link>
+                </li>
 
                 <li className="nav-item">
                   <Link
@@ -92,7 +97,10 @@ export default function Navbar() {
                 </li>
 
                 <li className="nav-item">
-                  <Link className="nav-link" to="/billing">
+                  <Link
+                    className="nav-link"
+                    to="/billing"
+                  >
                     Billing
                   </Link>
                 </li>
