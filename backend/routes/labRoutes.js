@@ -35,6 +35,28 @@ router.post(
     }
   }
 );
+// Get all lab reports for doctors/admins
+router.get(
+  "/",
+  protect,
+  authorize("doctor", "admin"),
+  async (req, res) => {
+    try {
+      const reports = await LabReport.find()
+        .populate("patient", "name email")
+        .populate("verifier1", "name email")
+        .populate("verifier2", "name email")
+        .sort({ createdAt: -1 });
+
+      res.json(reports);
+    } catch (error) {
+      res.status(500).json({
+        message: "Server error.",
+        error: error.message,
+      });
+    }
+  }
+);
 
 
 // Get finalized reports for the logged-in patient
