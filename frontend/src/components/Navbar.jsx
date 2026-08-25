@@ -72,6 +72,12 @@ export default function Navbar() {
                     My Profile
                   </Link>
                 </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/my-bills">
+                    My Bills
+                  </Link>
+                </li>
               </>
             )}
 
