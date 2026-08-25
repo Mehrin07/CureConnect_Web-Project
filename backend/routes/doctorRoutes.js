@@ -28,19 +28,34 @@ router.get("/", async (req, res) => {
       "userId",
       "name email"
     );
+
+  
+
+    // ==================================================
+    // FORMAT RESPONSE FOR FRONTEND
+    // ==================================================
     const result = doctors.map((doctor) => ({
-      _id: doctor._id,
+      _id: doctor.userId?._id,
+       doctorRecordId: doctor._id,
+      
       name: doctor.userId?.name || "Unknown Doctor",
+
       email: doctor.userId?.email || "",
+
       department: doctor.department,
+
       specialty: doctor.specialization,
+
       phone: doctor.phone,
+
       experience: doctor.experience,
+
       roomNumber: doctor.roomNumber,
+
       availableDays: doctor.availableDays,
+
       isAvailable: doctor.status === "Available",
     }));
-    
 
     res.json(result);
   } catch (error) {

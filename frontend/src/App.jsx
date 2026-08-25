@@ -15,6 +15,8 @@ import BloodBank from "./pages/BloodBank.jsx";
 import Billing from "./pages/Billing.jsx";
 import Complaint from "./pages/Complaint.jsx";
 import LabReports from "./pages/LabReports.jsx";
+import MyAppointments from "./pages/MyAppointments.jsx";
+
 
 export default function App() {
   return (
@@ -33,13 +35,14 @@ export default function App() {
             <Route path="/doctors" element={<Doctors />} />
 
             <Route path="/my-profile" element={<MyProfile />} />
+
+            <Route path="/my-appointments"element={<MyAppointments />}/>
+
             <Route path="/my-bills" element={<MyBills />} />
+
             <Route path="/qr-scanner" element={<QRScanner />} />
 
-            <Route
-              path="/lab-verification"
-              element={<LabVerification />}
-            />
+            <Route path="/lab-verification" element={<LabVerification />} />
 
             <Route path="/blood-bank" element={<BloodBank />} />
 

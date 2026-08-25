@@ -73,6 +73,12 @@ export default function Navbar() {
                   </Link>
                 </li>
 
+                 <li className="nav-item">
+                  <Link className="nav-link" to="/my-appointments" >
+                     My Appointments
+                  </Link>
+               </li>
+
                 <li className="nav-item">
                   <Link className="nav-link" to="/my-bills">
                     My Bills
@@ -85,11 +91,8 @@ export default function Navbar() {
               user?.role === "admin") && (
               <>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    to="/qr-scanner"
-                  >
-                    QR Scanner
+                  <Link className="nav-link" to="/qr-scanner">
+                    Scan Patient QR
                   </Link>
                 </li>
 
@@ -103,10 +106,7 @@ export default function Navbar() {
                 </li>
 
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    to="/billing"
-                  >
+                  <Link className="nav-link" to="/billing">
                     Billing
                   </Link>
                 </li>
