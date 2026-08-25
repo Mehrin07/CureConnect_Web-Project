@@ -16,6 +16,8 @@ import Billing from "./pages/Billing.jsx";
 import Complaint from "./pages/Complaint.jsx";
 import LabReports from "./pages/LabReports.jsx";
 import MyAppointments from "./pages/MyAppointments.jsx";
+import AdminFeedback from "./pages/AdminFeedback.jsx";
+
 
 
 export default function App() {
@@ -49,6 +51,8 @@ export default function App() {
             <Route path="/billing" element={<Billing />} />
 
             <Route path="/complaint" element={<Complaint />} />
+
+            <Route  path="/admin-feedback" element={<AdminFeedback />}/>
 
             <Route path="/lab-reports" element={<LabReports />} />
           </Routes>

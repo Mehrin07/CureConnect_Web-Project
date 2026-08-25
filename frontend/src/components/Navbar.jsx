@@ -110,6 +110,15 @@ export default function Navbar() {
                     Billing
                   </Link>
                 </li>
+                {user?.role === "admin" && (
+                <li className="nav-item">
+                 <Link className="nav-link" to="/admin-feedback" >
+                    View Feedback
+                 </Link>
+              </li>
+               )}
+
+
               </>
             )}
           </ul>
